@@ -1,12 +1,9 @@
 from rest_framework import serializers
+from .models import CvPhotoModel, ResumeModel
 
+class CvPhotoSerializer(serializers.ModelSerializer):
+    photo = serializers.ImageField()
 
-class ResumeSerializer(serializers.Serializer):
-    photo = serializers.FileField(
-        max_length = 10000000,
-        allow_empty_file = False,
-        use_url = False,)
-  
     # Personal details
     name = serializers.CharField()
     address = serializers.CharField()
@@ -48,5 +45,15 @@ class ResumeSerializer(serializers.Serializer):
     certificate1 = serializers.CharField()
     certificate2 = serializers.CharField(required=False)
     
+    class Meta:
+        model = CvPhotoModel
+        fields = "__all__"
 
+
+class ResumeSerializer(serializers.ModelSerializer):
+    file = serializers.FileField()
+
+    class Meta:
+        model = ResumeModel
+        fields = ['file']
 
