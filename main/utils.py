@@ -64,7 +64,7 @@ def cv_build(data, photo):
     
 
     # Save the document
-    doc.save(f"media/files/{data['name'].title()}cv.docx")
+    doc.save(f"media/files/{data['name'].title()}_CV.docx")
     outfile = ResumeModel.objects.create(file=f"files/{data['name'].title()}_CV.docx")
     outfile.save()
     
