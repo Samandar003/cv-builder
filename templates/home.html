@@ -33,7 +33,7 @@
     <form action="{% url 'home'  %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="input-field">
-            <input id="photo" type="file" class="validate" accept="image/*" required>
+            <input name="photo" id="photo" type="file" class="validate" accept="image/*" required>
             <label for="photo"> Photo </label>
           </div>
 
@@ -43,117 +43,117 @@
       </div>
 
       <div class="input-field">
-        <textarea id="address" class="materialize-textarea"></textarea required>
+        <textarea name="address" id="address" class="materialize-textarea"></textarea required>
         <label for="address">Address</label>
       </div>
 
       <div class="input-field">
-        <input id="phone" type="tel" class="validate" required>
+        <input name="phone" id="phone" type="tel" class="validate" required>
         <label for="phone">Phone</label>
       </div>
 
       <div class="input-field">
-        <input id="email" type="text" class="validate" required>
+        <input name="email" id="email" type="text" class="validate" required>
         <label for="email">Email</label>
       </div>
 
       <div class="input-field">
-        <input id="telegram" type="text" class="validate" required>
+        <input name="telegram" id="telegram" type="text" class="validate" required>
         <label for="telegram">Telegram</label>
       </div>
 
       <div class="input-field">
-        <input id="github" type="text" class="validate" required>
+        <input name="github" id="github" type="text" class="validate" required>
         <label for="github">Github</label>
       </div>
 
       <div class="input-field">
-        <input id="linkedin" type="text" class="validate" required>
+        <input name="linkedin" id="linkedin" type="text" class="validate" required>
         <label for="linkedin">LinkedIn</label>
       </div>
 
       <div class="input-field">
-        <input id="website" type="text" class="validate" required>
+        <input name="website" id="website" type="text" class="validate" required>
         <label for="website">Website</label>
       </div>
       
       <div class="input-field">
-        <input id="edu_place" type="text" class="validate" required>
+        <input name="edu_place" id="edu_place" type="text" class="validate" required>
         <label for="edu_place">Education Place</label>
       </div>
       
       <div class="input-field">
-        <input id="course" type="text" class="validate" required>
+        <input name="course" id="course" type="text" class="validate" required>
         <label for="course">Course</label>
       </div>
       
       <div class="input-field">
-        <input id="starting_date" type="date" class="validate" required>
+        <input name="starting_date" id="starting_date" type="date" class="validate" required>
         <label for="starting_date">Starting Date</label>
       </div>
       
       <div class="input-field">
-        <input id="ending_date" type="date" class="validate" required>
+        <input name="ending_date" id="ending_date" type="date" class="validate" required>
         <label for="ending_date">Ending Date</label>
       </div>
 
       <div class="input-field">
-        <input id="job_role" type="text" class="validate" required>
+        <input name="job_role"  id="job_role" type="text" class="validate" required>
         <label for="job_role">Job Role</label>
       </div>
 
       <div class="input-field">
-        <input id="work_place" type="text" class="validate" required>
+        <input name="work_place" id="work_place" type="text" class="validate" required>
         <label for="work_place">Work Place</label>
       </div>
 
       <div class="input-field">
-        <input id="start_date" type="date" class="validate" required>
+        <input name="start_date" id="start_date" type="date" class="validate" required>
         <label for="start_date">Start Date</label>
       </div>
 
       <div class="input-field">
-        <input id="end_date" type="date" class="validate" required>
+        <input name="end_date" id="end_date" type="date" class="validate" required>
         <label for="end_date">End Date</label>
       </div>
 
       <div class="input-field">
-        <input id="job_desc" type="text" class="validate" required>
+        <input name="job_desc" id="job_desc" type="text" class="validate" required>
         <label for="job_desc">Job Description</label>
       </div>
 
       <div class="input-field">
-        <input id="skills" type="text" class="validate" required>
+        <input name="skills" id="skills" type="text" class="validate" required>
         <label for="skills">Skills</label>
       </div>
 
       <div class="input-field">
-        <input id="project1" type="text" class="validate" required>
+        <input name="project1" id="project1" type="text" class="validate" required>
         <label for="project1">Project1</label>
       </div>
 
       <div class="input-field">
-        <input id="project2" type="text" class="validate" required>
+        <input name="project2" id="project2" type="text" class="validate" required>
         <label for="project2">Project2</label>
       </div>
 
       <div class="input-field">
-        <input id="project3" type="text" class="validate" required>
+        <input name="project3" id="project3" type="text" class="validate">
         <label for="project3">Project3</label>
       </div>
 
       <div class="input-field">
-        <input id="project4" type="text" class="validate" required>
+        <input name="project4" id="project4" type="text" class="validate">
         <label for="project4">Project4</label>
       </div>
 
       <div class="input-field">
-        <input id="certificate1" type="text" class="validate" required>
+        <input name="certificate1" id="certificate1" type="text" class="validate" required>
         <label for="certificate1">Certificate1</label>
       </div>
 
       <div class="input-field">
-        <input id="certificate2" type="text" class="validate" required>
+        <input name="certificate2"  id="certificate2" type="text" class="validate">
         <label for="certificate2">Certificate2</label>
       </div>
 
