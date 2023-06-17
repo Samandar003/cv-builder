@@ -1,6 +1,8 @@
 from django.db import models
-
+import os
+import random
 # Create your models here.
+
 
 class CvPhotoModel(models.Model):
     photo = models.ImageField(upload_to='photos/')
@@ -31,12 +33,11 @@ class CvPhotoModel(models.Model):
 
 
     def __str__(self):
-        return self.name
-
+        return self.photo.name
+    
 class ResumeModel(models.Model):
     file = models.FileField(upload_to='files/')
 
     def __str__(self):
         return self.file.name
-    
     

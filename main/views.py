@@ -34,7 +34,7 @@ class ResumeAPIView(APIView):
 def my_view(request):
     data = {}
     if request.method == "POST":
-        data['photo'] = request.FILES.get('photo')
+        # data['photo'] = request.FILES.get('photo')
         data['name'] = request.POST.get("name")
         data['address'] = request.POST.get('address')
         data['phone'] = request.POST.get('phone')
@@ -59,7 +59,6 @@ def my_view(request):
         data['project4'] = request.POST.get('project4', '')
         data['certificate1'] = request.POST.get('certificate1')
         data['certificate2'] = request.POST.get('certificate2', '')
-    
         obj = CvPhotoModel.objects.create(photo=request.FILES.get("photo"))
         obj.save()
         cv = utils.cv_build(data, obj.photo)
