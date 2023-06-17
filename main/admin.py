@@ -1,8 +1,7 @@
 from django.contrib import admin
-from .models import CvPhotoModel, ResumeModel, PhotoModel
+from .models import CvPhotoModel, ResumeModel
 
 admin.site.register(CvPhotoModel)
 admin.site.register(ResumeModel)
-admin.site.register(PhotoModel)
 
 # Register your models here.

@@ -3,11 +3,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from main.views import ResumeAPIView
-from main.serializers import ResumeSerializer
+from main.views import ResumeAPIView, my_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cv/', ResumeAPIView.as_view())
+    path('cv/', ResumeAPIView.as_view()),
+    path('', my_view, name='home'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
