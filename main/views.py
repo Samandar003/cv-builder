@@ -4,10 +4,10 @@ from .serializers import ResumeSerializer
 from .serializers import CvPhotoSerializer, ResumeSerializer
 from rest_framework.views import APIView
 from .models import CvPhotoModel
-from .models import ResumeModel
+from .models import ResumeModel, SampleResumeModel
 from django.shortcuts import render
 # Create your views here.
-from . import proba
+from .. import proba
 from django.http import HttpResponse
 from . import utils
 from rest_framework.response import Response
@@ -30,8 +30,9 @@ class CreateResumeAPIView(APIView):
         serializer.is_valid(raise_exception=True)
         # serializer.save()
         # obj = CvPhotoModel.objects.get(id=serializer.data.get('id'))
+        sample = SampleResumeModel.objects.all().first()
 
-        cv = proba.set_resume_data(serializer.data)
+        cv = proba.set_resume_data(serializer.data, sample.file)
         fserializer = ResumeSerializer(cv)
         return Response(fserializer.data)
 
