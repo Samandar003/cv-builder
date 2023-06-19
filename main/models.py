@@ -41,3 +41,7 @@ class ResumeModel(models.Model):
     def __str__(self):
         return self.file.name
     
+class SampleResumeModel(models.Model):
+    file = models.FileField(upload_to='sample/') 
+
+

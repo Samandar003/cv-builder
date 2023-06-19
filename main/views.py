@@ -7,6 +7,7 @@ from .models import CvPhotoModel
 from .models import ResumeModel
 from django.shortcuts import render
 # Create your views here.
+from . import proba
 from django.http import HttpResponse
 from . import utils
 from rest_framework.response import Response
@@ -15,21 +16,24 @@ class ResumeAPIView(APIView):
     def post(self, request):
         serializer = CvPhotoSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        # obj = PhotoModel.objects.create(image=serializer.data['image'])
-        # obj.save()
         serializer.save()
-        # print(obj.image)
 
-        # cv = utils.cv_build(serializer.data, obj.photo)
-        # return Response(serializer.data)
         obj = CvPhotoModel.objects.get(id=serializer.data.get('id'))
 
         cv = utils.cv_build(serializer.data, obj.photo)
         fserializer = ResumeSerializer(cv)
         return Response(fserializer.data)
 
+class CreateResumeAPIView(APIView):
+    def post(self, request):
+        serializer = CvPhotoSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        # serializer.save()
+        # obj = CvPhotoModel.objects.get(id=serializer.data.get('id'))
 
-
+        cv = proba.set_resume_data(serializer.data)
+        fserializer = ResumeSerializer(cv)
+        return Response(fserializer.data)
 
 def my_view(request):
     data = {}

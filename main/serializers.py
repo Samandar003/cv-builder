@@ -10,49 +10,51 @@ class ResumeSerializer(serializers.ModelSerializer):
 from .models import CvPhotoModel, ResumeModel
 
 class CvPhotoSerializer(serializers.ModelSerializer):
-    photo = serializers.ImageField()
+    # photo = serializers.ImageField()
 
     # Personal details
     name = serializers.CharField()
-    address = serializers.CharField()
-    phone = serializers.CharField()
-    email = serializers.EmailField()
-
-    # Add Links
-    telegram = serializers.CharField()
-    github = serializers.CharField()
-    linkedin = serializers.CharField()
-    website = serializers.CharField()
-
-    # Education details
-    edu_place = serializers.CharField()
-    course = serializers.CharField()
-    # start_date = serializers.CharField(required=True)
-    # end_date = serializers.CharField(required=True)
-    starting_date = serializers.CharField()
-    ending_date = serializers.CharField()
-
-
-    # Work experience
-    job_role = serializers.CharField()
-    work_place = serializers.CharField()
-    start_date = serializers.CharField()
-    end_date = serializers.CharField()
-    job_desc = serializers.CharField()
-
-    # Skills
-    skills = serializers.CharField()
-
-    project1 = serializers.CharField()
-    project2 = serializers.CharField()
-    project3 = serializers.CharField(required=False)
-    project4 = serializers.CharField(required=False)
-
-
-    # certificates
-    certificate1 = serializers.CharField()
-    certificate2 = serializers.CharField(required=False)
+    surname = serializers.CharField()
     
+    occupation = serializers.CharField()
+    myphone = serializers.CharField()
+    myemail = serializers.CharField()
+    mytelegram = serializers.CharField()
+    mygithub = serializers.CharField()
+    mylinkedin = serializers.CharField()
+    myaddress = serializers.CharField()
+    
+    start_job = serializers.CharField()
+    end_job = serializers.CharField()
+    job_role = serializers.CharField()
+    workplace = serializers.CharField()
+    work_description = serializers.CharField()
+    about_me = serializers.CharField()
+    job_role = serializers.CharField()
+    project_1 = serializers.CharField()
+    project_1_description = serializers.CharField()
+    project_2 = serializers.CharField()
+    project_2_description = serializers.CharField()
+    project_3 = serializers.CharField()
+    project_3_description = serializers.CharField()
+    project_4 = serializers.CharField()
+    project_4_description = serializers.CharField()
+    
+    skill_1 = serializers.CharField()
+    skill_2 = serializers.CharField()
+    skill_3 = serializers.CharField()
+    edu_place_1 = serializers.CharField()
+    course_and_duration = serializers.CharField()
+    edu_place_2 = serializers.CharField()
+    course_and_duration_2 = serializers.CharField()
+    language_1 = serializers.CharField()
+    level_1 = serializers.CharField()
+    language_2 = serializers.CharField()
+    level_2 = serializers.CharField()
+    hobby_1 = serializers.CharField()
+    hobby_2 = serializers.CharField()      
+          
+    # Add Links
     class Meta:
         model = CvPhotoModel
         fields = "__all__"
