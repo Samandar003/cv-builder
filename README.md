@@ -124,5 +124,5 @@ Body:
 Response:
 
 ```
-"file":"SAMANDAR_CV.docx"
+"file":"{name}_CV.docx"
 ```
